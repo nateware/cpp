@@ -62,6 +62,14 @@ const int pathwidth = 100;
 
  */
 
+void increase (void* data, int psize)
+{
+  if ( psize == sizeof(char) )
+  { char* pchar; pchar=(char*)data; ++(*pchar); }
+  else if (psize == sizeof(int) )
+  { int* pint; pint=(int*)data; ++(*pint); }
+}
+
 int main ()
 {
   int times = 0;
@@ -120,14 +128,11 @@ int main ()
   *(spouse+2) = 'z';
   cout << spouse << endl;
 
-
-  // ptr arith
-  for(int i=0; i < strlen(spouse); i++) {
-    cout << "i=" << i << endl;
-    *spouse++ = let++;
-  }
-  cout << spouse << endl;
-
+  char a = 'x';
+  int b = 1602;
+  increase (&a, sizeof(a));
+  increase (&b, sizeof(b));
+  cout << a << ", " << b << endl;
   return 0;
 }
 
