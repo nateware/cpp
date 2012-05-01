@@ -1,0 +1,14 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+.DS_Store
+.*.swp
+.swp
+dump.rdb
+public/assets/
+.rsync_cache
+config/*.conf
+config/redis_client.yml
+crontab

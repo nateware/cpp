@@ -79,6 +79,7 @@ int main ()
 
   char wife[] = "Sarah";
   char *spouse;
+  char *name;
 
 
   //CPet fluffy();
@@ -133,6 +134,45 @@ int main ()
   increase (&a, sizeof(a));
   increase (&b, sizeof(b));
   cout << a << ", " << b << endl;
+
+
+  // non-deleteable, "direct" instance (ala struct)
+  CPet fluffy(spouse, 7);
+  name = fluffy.GetName();
+  cout << name << " is " << fluffy.GetAge() << " years old" << endl;
+  fluffy.HappyBirthday();
+  cout << name << " is " << fluffy.GetAge() << " years old" << endl;
+
+  // more flexible usage
+  CPet *bunny = new CPet(spouse, 7);
+  name = bunny->GetName();
+  cout << name << " is " << bunny->GetAge() << " years old" << endl;
+  bunny->HappyBirthday();
+  cout << name << " is " << bunny->GetAge() << " years old" << endl;
+
+  char hurt[] = "RF";
+  char hurt2[] = "LR";
+  bunny->HurtLeg(hurt);
+  bunny->HurtLeg(hurt);
+  bunny->LegStatus();
+  bunny->HurtLeg(hurt2);
+  bunny->LegStatus();
+  bunny->HealLeg(hurt2);
+  bunny->LegStatus();
+
+
+
+
+
+
+
+
+
   return 0;
 }
+
+
+
+
+
 
