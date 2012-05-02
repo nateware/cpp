@@ -10,3 +10,11 @@ pet: pet.h pet.cpp
 
 stl: stl.cpp
 	$(GPP) -o stl stl.cpp
+
+udp: udp.cpp
+	$(GPP) -o udpclient udpclient.cpp
+	$(GPP) -o udpserver udpserver.cpp
+
+hello: hello.asm
+	nasm -f macho hello.asm
+	ld -o hello -e mystart hello.o
