@@ -58,8 +58,8 @@ int main (int argc, char * const argv[]) {
     }
     printf("opened %s\n", file2);
 
-    /* read each val, remember an integer is 4 bytes, and we are counting
-     * the number of bits that are "on"
+    /* read each val, just tell fread() the data type/size we expect.
+     * we are counting the number of bits that are "on"
      */
     long val;
     long int total_bits = 0;
