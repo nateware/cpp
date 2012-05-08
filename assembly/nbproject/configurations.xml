@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="assembly" root=".">
+      <in>array1.asm</in>
+      <in>array1c.c</in>
+      <in>asm_io.asm</in>
+      <in>big_int.cpp</in>
+      <in>big_int.hpp</in>
+      <in>big_math.asm</in>
+      <in>bitcount.c</in>
+      <in>bitcount2.c</in>
+      <in>cdecl.h</in>
+      <in>dmax.asm</in>
+      <in>dmaxt.c</in>
+      <in>driver.c</in>
+      <in>first.asm</in>
+      <in>fprime.c</in>
+      <in>main4.asm</in>
+      <in>main5.c</in>
+      <in>main6.c</in>
+      <in>math.asm</in>
+      <in>max.asm</in>
+      <in>memex.c</in>
+      <in>memory.asm</in>
+      <in>prime.asm</in>
+      <in>prime2.asm</in>
+      <in>quad.asm</in>
+      <in>quadt.c</in>
+      <in>read.asm</in>
+      <in>readt.c</in>
+      <in>skel.asm</in>
+      <in>sub1.asm</in>
+      <in>sub2.asm</in>
+      <in>sub3.asm</in>
+      <in>sub4.asm</in>
+      <in>sub5.asm</in>
+      <in>sub6.asm</in>
+      <in>test_big_int.cpp</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="array1.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="array1c.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="asm_io.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="big_int.cpp" ex="true" tool="1" flavor="0">
+      </item>
+      <item path="big_int.hpp" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="big_math.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="bitcount.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="bitcount2.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="dmax.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="dmaxt.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="first.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="fprime.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="main4.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="main5.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="main6.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="math.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="max.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="memex.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="memory.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="prime.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="prime2.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="quad.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="quadt.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="read.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="readt.c" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="skel.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="sub1.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="sub2.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="sub3.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="sub4.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="sub5.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="sub6.asm" ex="true" tool="4" flavor="0">
+      </item>
+      <item path="test_big_int.cpp" ex="true" tool="1" flavor="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
