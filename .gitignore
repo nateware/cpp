@@ -15,4 +15,12 @@ crontab
 /threads/nbproject/private/
 /voidptr/nbproject/private/
 /voidptr/build/Debug/
+<<<<<<< HEAD
 /assembly/nbproject/private/
+=======
+/java1/nbproject/private/
+/java1/build/
+/mask/nbproject/private/
+/mask/build/Debug/
+/mask/dist/Debug/
+>>>>>>> d686e05cf8d98e5d1fe3afdb772c624cf4e5be16

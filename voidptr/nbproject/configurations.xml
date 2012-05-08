@@ -38,11 +38,11 @@
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/System/Library/Frameworks</pElem>
+            <pElem>/Library/Frameworks</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
-          <commandLine>-L/System/Library/Frameworks -framework SFML -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network</commandLine>
+          <commandLine>-L/Library/Frameworks -framework SFML -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network</commandLine>
         </linkerTool>
       </compileType>
     </conf>

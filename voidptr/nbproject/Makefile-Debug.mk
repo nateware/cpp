@@ -60,17 +60,17 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/voidptr: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -L/System/Library/Frameworks -framework SFML -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/voidptr ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -L/Library/Frameworks -framework SFML -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/voidptr ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/System/Library/Frameworks -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/Library/Frameworks -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/CAnimal.o: CAnimal.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/System/Library/Frameworks -MMD -MP -MF $@.d -o ${OBJECTDIR}/CAnimal.o CAnimal.cpp
+	$(COMPILE.cc) -g -I/Library/Frameworks -MMD -MP -MF $@.d -o ${OBJECTDIR}/CAnimal.o CAnimal.cpp
 
 # Subprojects
 .build-subprojects:
