@@ -12,3 +12,6 @@ public/assets/
 config/*.conf
 config/redis_client.yml
 crontab
+/threads/nbproject/private/
+/voidptr/nbproject/private/
+/voidptr/build/Debug/
