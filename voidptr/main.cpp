@@ -1,65 +1,55 @@
-/* 
- * File:   main.cpp
- * Author: nwiger
- *
- * Created on May 7, 2012, 6:11 PM
- */
-
-
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
  
-using namespace std;
-
  int main()
  {
      // Create the main window
-     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+     sf::RenderWindow App(sf::VideoMode(800, 600), "SFML window");
  
      // Load a sprite to display
-     sf::Texture texture;
-     if (!texture.loadFromFile("cute_image.jpg"))
+     sf::Image Image;
+     if (!Image.LoadFromFile("cute_image.jpg"))
          return EXIT_FAILURE;
-     sf::Sprite sprite(texture);
+     sf::Sprite Sprite(Image);
  
-     // Create a graphical text to display
-     sf::Font font;
-     if (!font.loadFromFile("arial.ttf"))
+     // Create a graphical string to display
+     sf::Font Arial;
+     if (!Arial.LoadFromFile("arial.ttf"))
          return EXIT_FAILURE;
-     sf::Text text("Hello SFML", font, 50);
+     sf::String Text("Hello SFML", Arial, 50);
  
      // Load a music to play
-     sf::Music music;
-     if (!music.openFromFile("nice_music.ogg"))
+     sf::Music Music;
+     if (!Music.OpenFromFile("nice_music.ogg"))
          return EXIT_FAILURE;
 
      // Play the music
-     music.play();
+     Music.Play();
  
      // Start the game loop
-     while (window.isOpen())
+     while (App.IsOpened())
      {
          // Process events
-         sf::Event event;
-         while (window.pollEvent(event))
+         sf::Event Event;
+         while (App.GetEvent(Event))
          {
              // Close window : exit
-             if (event.type == sf::Event::Closed)
-                 window.close();
+             if (Event.Type == sf::Event::Closed)
+                 App.Close();
          }
  
          // Clear screen
-         window.clear();
+         App.Clear();
  
          // Draw the sprite
-         window.draw(sprite);
+         App.Draw(Sprite);
  
          // Draw the string
-         window.draw(text);
+         App.Draw(Text);
  
          // Update the window
-         window.display();
+         App.Display();
      }
  
      return EXIT_SUCCESS;
-}
+ }
