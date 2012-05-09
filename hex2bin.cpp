@@ -4,64 +4,49 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <cstdlib>
+
+// http://20bits.com/article/interview-questions-counting-bits
 
 /* Print n as a binary number */
-int printbitssimple(long n) {
-  /* find max power of 2 (binary) */
-  unsigned int p = 0;
-  while (pow(2,p) < n) p++;
-  printf("n=%ld, p=%d (%f)\n", n, p, pow(2,p));
-
-  unsigned int r = 1;
-
-  /* fill it up with 1's */
-	unsigned int i;
-	i = 1 << (sizeof(n) * p - 1);
-  printf("i=%d\n", i);
-
-	while (i > 0) {
-		if (n & i) {
-      r <<= 1;
-			printf("1");
-    } else {
-      r <<= 1;
-			printf("0");
-    }
-		i >>= 1;
-	}
-  printf("\n");
-
-  if (r != n)
-    fprintf(stderr, "Warning: ret(%d) != n(%ld)\n", r, n);
+int printbits(long unsigned int n) {
+    printf("%lu => ", n);
+    int count = 0;    
+    while (n) {
+		    if (n & 0x1u) {
+            printf("1");
+            count++;
+        } else {
+            printf("0");
+        }
+		    n >>= 1;
+	  }
+    printf("\n");
+	  return count;
 }
 
-/* Print n as a binary number */
-void printbits(int n) {
-	unsigned int i, step;
+void shuffle_array(int * array, int len) {
+    int n = len - 1;
+    while (n > 0) {
+        int k = rand() % n;
+        n--;
+        int tmp  = array[k];
+        array[k] = array[n];
+        array[n] = tmp;
+    }
+}
 
-	if (0 == n) { /* For simplicity's sake, I treat 0 as a special case*/
-		printf("0000");
-		return;
-	}
+// Pre-compute this elsewhere and put it here.
+static unsigned int bit_table16[0x1u << 16];
 
-	i = 1<<(sizeof(n) * 8 - 1);
+// This only works for 32-bit integers but takes constant time.
+int bitcount_32(long unsigned int n) {
+    return bit_table16[n & 0xFFFFu] + bit_table16[(n >> 16) & 0xFFFFu];
+}
 
-	step = -1; /* Only print the relevant digits */
-	step >>= 4; /* In groups of 4 */
-	while (step >= n) {
-		i >>= 4;
-		step >>= 4;
-	}
-
-	/* At this point, i is the smallest power of two larger or equal to n */
-	while (i > 0) {
-		if (n & i)
-			printf("1");
-		else
-			printf("0");
-		i >>= 1;
-	}
-  printf("\n");
+void fastprintbits(long unsigned int n) {
+    int bits = bitcount_32(n);
+    printf("bits=%d\n", bits);
 }
 
 int main()
@@ -101,9 +86,25 @@ e 1110
 
 */
 
-	printbitssimple(0x24f3d6);
 
-  long num = 0x473a5291ce8;
-  printf("num=%ld\n", num);
-  printbitssimple(num);
+	printbits(0x24f3d6);
+
+  long unsigned int num = 0x473a5291ce8;
+  printf("num=%lu\n", num);
+  printbits(num);
+
+  fastprintbits(num);
+
+#define array_len 10
+  int array[array_len] = {0,1,2,3,4,5,6,7,8,9};
+  for (int i=0; i < array_len; i++)
+    printf("array[%d]=%d\n", i, array[i]);
+
+  printf("shuffle\n");
+  shuffle_array(array, array_len);
+
+  for (int i=0; i < array_len; i++)
+    printf("array[%d]=%d\n", i, array[i]);
+
 }
+
